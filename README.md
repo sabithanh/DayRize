@@ -1,21 +1,17 @@
 # Environment Setup for Automation Task
 
 ## Prerequisites
-* Node.js should be installed and available from command line
-  * To check that Node.js is installed, run `npm` command in console
-* Visual Studio Code is installed as development IDE
-  * For convenience you can use build-in command line in Visual Studio Code (ctrl + ~)
+* Node.js and NPM should be installed and available from command line
+  * To check that NPM is installed, run `npm` command in console
 * Google Chrome browser is installed
 
 ## Solution setup
-* Run `npm install` command to fetch all prequired packages
+- Run `npm install` command to fetch all dependencies
+- If you get an error from incorrect webdriver version or missing webdriver, run the below command from the project folder
 
-## Running Web Application
-Run `npm run start` for launching of local web server. Keep this instance of command line alive as web server is running there. Navigate to `http://localhost:4200/`
+```bash
+node node_modules/protractor/bin/webdriver-manager update
+```
 
 ## Running end-to-end tests
 Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure your app is available by `http://localhost:4200/`.
-
-## Task Implementation
-See [Task Description](DESCRIPTION.md) for detailed requirements.
